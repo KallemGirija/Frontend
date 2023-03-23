@@ -14,30 +14,40 @@ export class TestPaperAdminViewComponent {
   __testPaperService:TestPaperService;
   router:Router;
 
-  allTestpapers:TestPaperDto[]=[];
-  showStatus:boolean=false;
+  allTestPapers: Array<TestPaper> = [];
+  testPaper:TestPaperDto[]=[];
+
+  status=false;
+  message='';
+
+  
+  testPaperId:string='';
 
   constructor(testPaperService:TestPaperService,router:Router)
 {
   this.__testPaperService=testPaperService;
+  this.allTestPapers=this.__testPaperService.getTestPaperArr();
   this.router=router;
 }
 
-addTestQuestion(testPaperId:number){
+addTestPapers(testPaperId:number){
   //localStorage.removeTestQuestion('testPaperId');
   //localStorage.setTestQuestion('testPaperId',testPaperId+'');
-  this.router.navigate(['addquestions']);
+  this.router.navigate(['addtestpapers']);
+ 
+  }
+  
 
-}
+
 
 viewAllTestPapers(){
   this.__testPaperService.getAllTestPaper().subscribe(
     data=>{
       console.log("data:-"+data);
-      this.allTestpapers=data;
+      this.testPaper=data;
     },err=>{
       console.log("error from spring",err);
     }
   )
-}
+  }
 }
