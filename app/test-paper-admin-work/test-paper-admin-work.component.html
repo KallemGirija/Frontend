@@ -1,0 +1,75 @@
+<div style="width:50%;background-color: aqua;">
+    <form style="width:50;margin-left: 25%;" (ngSubmit)="onSubmit()" class="form-horizontal"#myForm="ngForm">
+        <div class="mb-3">
+            <label class="form-label">Difficulty Level</label>
+            <input type="text" class="form-control" [(ngModel)]="tp.difficultyLevel" id="difficultyLevel" name="difficultyLevel"
+                #difficultyLevel="ngModel" required pattern="[0-9]*[a-zA-Z_]+[0-9]*">
+            <div *ngIf="difficultyLevel.invalid">
+                <span style="color: red;" *ngIf="difficultyLevel.errors?.['required']">
+
+                    Difficulty Level is required Field
+                </span>
+                <span style="color: red;" *ngIf="difficultyLevel.errors?.['pattern']">
+                    Difficulty Level is not valid
+                </span>
+            </div>
+            <span style="color: rgb(4, 205, 51);" *ngIf="difficultyLevel.valid">
+                Difficulty Level is valid
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" [(ngModel)]="tp.description" id="description" name="description"
+            #description="ngModel" required pattern="[0-9]*[a-zA-Z_]+[0-9]*">
+            <div *ngIf="description.invalid">
+                <span style="color: red;" *ngIf="description.errors?.['required']">
+
+                    Description is required Field
+                </span>
+                <span style="color: red;" *ngIf="description.errors?.['pattern']">
+                   Description is not valid
+                </span>
+            </div>
+            <span style="color: rgb(4, 205, 51);" *ngIf="description.valid">
+               Description is valid
+            </span>
+        </div>
+            
+        <div class="mb-3">
+            <label class="form-label">Course</label>
+            <input type="text" class="form-control" [(ngModel)]="tp.course" id="course" name="course"
+            #course="ngModel" required pattern="[0-9]*[a-zA-Z_]+[0-9]*">
+            <div *ngIf="course.invalid">
+                <span style="color: red;" *ngIf="course.errors?.['required']">
+
+                    Course is required Field
+                </span>
+                <span style="color: red;" *ngIf="course.errors?.['pattern']">
+                  Course is not valid
+                </span>
+            </div>
+            <span style="color: rgb(4, 205, 51);" *ngIf="course.valid">
+               Course is valid
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">No of Questions</label>
+            <input type="text" class="form-control" [(ngModel)]="tp.noOfQuestions" id="noOfQuestions" name="noOfQuestions"
+            #noOfQuestions="ngModel" required pattern="[0-9]">
+            <div *ngIf="noOfQuestions.invalid">
+                <span style="color: red;" *ngIf="noOfQuestions.errors?.['required']">
+                    No of Questions is required Field
+                </span>
+                <span style="color: red;" *ngIf="noOfQuestions.errors?.['pattern']">
+                    No of Questions is not valid
+                </span>
+            </div>
+                <span style="color: rgb(4, 205, 51);" *ngIf="noOfQuestions.valid">
+                    No of Questions is valid
+                </span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>

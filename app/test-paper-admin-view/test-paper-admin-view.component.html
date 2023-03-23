@@ -1,0 +1,19 @@
+<button class="btn btn-primary"  (click)="viewAllTestPapers()">All TestPapers</button>
+<div *ngFor="let tp of TestPapers" style="background-color:rgb(36, 87, 225);">
+    <table>
+        <tr>
+            <td>
+                <p>{{tp.difficultyLevel}}</p>
+                <h2>{{tp.description}} </h2>
+                <hr />
+                <p>  {{tp.course}} </p>
+                <br>
+                <p> {{tp.noOfQuestions}}</p>
+                <br>
+            </td>
+        </tr>
+        <hr>
+    </table>
+    </div>
+    <br>
+

@@ -1,0 +1,23 @@
+<div style="width:50%;background-color: aqua;">
+    <form style="width:50;margin-left: 25%;" (ngSubmit)="onSubmit()" class="form-horizontal"#myForm="ngForm">
+<div class="mb-3"><br>
+    <label class="form-label">Score</label><br>
+    <input type="" class="form-control" [(ngModel)]="e.score" id="score" name="score"
+       #score="ngModel" required pattern="[0-9]">
+    <div *ngIf="score.invalid">
+        <span style="color: red;" *ngIf="score.errors?.['required']">
+            Score is required Field
+        </span>
+        <span style="color: red;" *ngIf="score.errors?.['pattern']">
+            Score is not valid
+        </span>
+    </div>
+        <span style="color: rgb(4, 205, 51);" *ngIf="score.valid">
+            score is valid
+        </span>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

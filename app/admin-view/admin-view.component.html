@@ -1,0 +1,23 @@
+<button  class="btn btn-primary" (click)="viewAllExams()">All Exams</button>
+<div *ngFor="let e of allExams" style="background-color:rgb(244, 166, 138);">
+<table>
+    <td><p>{{e.examId}}</p>
+        <h2>{{e.score}} </h2>
+        <hr />
+        <p>{{e.dateOfExam}}</p>
+        <br>
+    </td>
+
+<hr>
+<button  class="btn btn-primary" (click)=" addTestPaper(e.examId)">
+    Add TestPapers</button>
+</table>
+</div>
+<hr/>
+
+
+
+
+
+
+
