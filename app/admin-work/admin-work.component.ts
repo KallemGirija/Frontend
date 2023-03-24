@@ -15,7 +15,7 @@ export class AdminWorkComponent {
   __examService:ExamService;
   status =false;
   message='';
-  e:Exam = new Exam(0,0,0);
+  e:Exam = new Exam(0,0,0,'');
   e1:Exam[]=[];
 
 

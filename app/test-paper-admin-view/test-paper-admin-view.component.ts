@@ -22,19 +22,26 @@ export class TestPaperAdminViewComponent {
 
   
   testPaperId:string='';
+  examId:string='';
 
   constructor(testPaperService:TestPaperService,router:Router)
 {
   this.__testPaperService=testPaperService;
   this.allTestPapers=this.__testPaperService.getTestPaperArr();
+  //this.examId=localStorage.getTestPaper('examId')||'';
+  //this.testPaperId=localStorage.getTestPaper('testPaperId')||'';
   this.router=router;
 }
 
-addTestPapers(testPaperId:number){
+//addTestPapers(testPaperId:number){
   //localStorage.removeTestQuestion('testPaperId');
   //localStorage.setTestQuestion('testPaperId',testPaperId+'');
-  this.router.navigate(['addtestpapers']);
+  //this.router.navigate(['addtestpapers']);
  
+  //}
+
+  addTestQuestion(testPaperId:number){
+    this.router.navigate(['testpapers']);
   }
   
 
@@ -50,4 +57,6 @@ viewAllTestPapers(){
     }
   )
   }
+
+  
 }

@@ -15,14 +15,16 @@ import { RouterModule,Routes } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import{FormsModule} from '@angular/forms';
 import { AboutComponent } from './about/about.component';
+import { UserComponent } from './user/user.component';
 
 
 
 
 
 const allLinks:Routes = [
-  {path : 'addtestpapers',component:AdminViewComponent},
+  {path : 'addexams',component:AdminViewComponent},
   {path : 'addtestQuestions',component:TestQuestionViewComponent},
+  {path : 'about',component:AboutComponent}
 ]
 
 @NgModule({
@@ -36,7 +38,9 @@ const allLinks:Routes = [
     AdminViewComponent,
     TestPaperAdminWorkComponent,
     TestPaperAdminViewComponent,
-    AboutComponent
+    AboutComponent,
+    UserComponent
+    
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(allLinks),

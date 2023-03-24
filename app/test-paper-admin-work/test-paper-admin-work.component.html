@@ -36,22 +36,22 @@
             </span>
         </div>
             
-        <div class="mb-3">
-            <label class="form-label">Course</label>
-            <input type="text" class="form-control" [(ngModel)]="tp.course" id="course" name="course"
-            #course="ngModel" required pattern="[0-9]*[a-zA-Z_]+[0-9]*">
-            <div *ngIf="course.invalid">
-                <span style="color: red;" *ngIf="course.errors?.['required']">
-
-                    Course is required Field
-                </span>
-                <span style="color: red;" *ngIf="course.errors?.['pattern']">
-                  Course is not valid
-                </span>
+        <div class="form-group">
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomerSelect">Course</label>
+                <select class="custom-select mr-sm-2" [(ngModel)]="tp.course" id="course" name="course" #course="ngModel"
+                    required>
+                    <option value=" " disabled selected>Select</option>
+                    <option value="Java">Java</option>
+                    <option value="Angular">Angular</option>
+                   
+                </select>
+                <div *ngIf="course.invalid">
+                    <span style="color: red;" *ngIf="course.errors?.['required']">
+                        Course is required Field
+                    </span>
+                </div>
             </div>
-            <span style="color: rgb(4, 205, 51);" *ngIf="course.valid">
-               Course is valid
-            </span>
         </div>
 
         <div class="mb-3">

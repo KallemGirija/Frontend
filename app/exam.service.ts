@@ -19,6 +19,7 @@ export class ExamService {
 
   submitExamEndPoint:string=this.baseURL+'/exam/register';
   getAllExamEndPoint:string=this.baseURL+'/exam/list';
+  
 
   getExamArr(){
     return [];
@@ -36,13 +37,13 @@ export class ExamService {
   UpdateTestPaper(examid:string,testPaperId:string):Observable<Exam>{
     console.log("inside the method :"+examid);
     let updateEndPoint='';
-    let examFromDB:Exam=new Exam(0,0,0);
+    let examFromDB:Exam=new Exam(0,0,0,'');
     updateEndPoint =this.baseURL+'/exam/'+examid+'/testPaper/'+testPaperId; 
     return this.http.put<Exam>(`${updateEndPoint}`,examFromDB);
   
   }
   
-  getAllexam():Observable<Exam[]>{
+  getAllExam():Observable<Exam[]>{
     console.log("inside get method 1 : TestPaper "+this.getAllExamEndPoint);
     return this.http.get<Exam[]>(`${this. getAllExamEndPoint}`);
   

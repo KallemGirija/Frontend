@@ -1,16 +1,17 @@
+<br>
 <button  class="btn btn-primary" (click)="viewAllExams()">All Exams</button>
-<div *ngFor="let e of allExams" style="background-color:rgb(244, 166, 138);">
+<div *ngFor="let e of allExams" style="background-color:rgb(62, 70, 179);">
 <table>
-    <td><p>{{e.examId}}</p>
-        <h2>{{e.score}} </h2>
-        <hr />
-        <p>{{e.dateOfExam}}</p>
+    <td><p>ExamId:{{e.examId}}</p>
+        <p>Score:{{e.score}} </p>
+        <p>DateOfExam:{{e.dateOfExam}}</p>
         <br>
     </td>
 
 <hr>
-<button  class="btn btn-primary" (click)=" addTestPaper(e.examId)">
-    Add TestPapers</button>
+                 <button  class="btn btn-primary" (click)=" addTestPaper(e.examId)">
+                              Add TestPapers</button>
+            <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
 </table>
 </div>
 <hr/>
