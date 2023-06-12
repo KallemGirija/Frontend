@@ -1,0 +1,62 @@
+<div class="col-lg-12">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <h3 class="card-title "><b>Today's Event</b>
+                        <i class="fa fa-birthday-cake" style="font-size:38px;color:rgb(110, 162, 211); padding-left:100px; margin: 10px;"></i>
+  
+                    </h3><br><br><br><br>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-name">
+                                <img src="../assets/images/1.jpeg" class="rounded-circle"  width="22px" height="22px">
+                                <img src="../assets/images/1.jpeg" class="rounded-circle" width="22px" height="22px">
+                                <img src="../assets/images/1.jpeg" class="rounded-circle" width="22px" height="22px">
+  
+  
+  
+                            </div>
+                            <div class="sub-title">+11Birthday</div>
+                            <div class="wrapper">
+                             <button type="button"  (click)="openpopup()" >Send Wishes</button>
+                             <br><br>
+                             
+                            </div>
+  
+                            <div class="title">
+                              <img src="../assets/images/1.jpeg" class="rounded-circle" width="22px" height="22px"><br>
+  
+                              +1 Anniversary</div>
+                              <div class="wrapper">
+                                <button type="button"  (click)="openpopup()" >Send Wishes</button>
+                                
+                                
+                               </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          
+  
+<div class = "overlay" *ngIf="show" >
+    <div class="content" >
+      <div class="close" (click)="closepopup()">
+        &times;
+      </div>
+      To: <input type="email" id="to" name="to" [(ngModel)]="email" class="form-control"><br>
+      <input type="text" id="sub" name="sub" [(ngModel)]="sub" class="form-control"><br>
+      lable <br>
+  
+      <textarea id="message" name="message" [(ngModel)]="message" class="form-control"></textarea><br>
+      <button type="button"  (click) = "closepopup()">discard</button>
+      <!-- <button type="button" routerLink="new" (click)="sendWishes()" > send</button> -->
+      <button type="button"  routerLink="/new" (click)="sendWishes()"  class="btn btn-primary">send</button>
+
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+   

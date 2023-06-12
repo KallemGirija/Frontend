@@ -1,0 +1,10 @@
+h1{
+    margin-left: 200px;
+    padding-top: -10px;
+}
+.card{
+    margin-right:500px;
+    margin-top:-250px;
+    border-radius: 30px;
+    background-color: cadetblue;
+}

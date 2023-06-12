@@ -1,0 +1,13 @@
+
+td,th{
+    border: 1px solid #151515;
+          text-align: justify;
+          padding: 10px;
+          table-layout: fixed;
+          
+    
+}
+.tab{
+    padding-top:100px;
+    padding-left:250px;
+}

@@ -1,0 +1,124 @@
+.sidenav{
+
+    
+     background: white;
+    
+    transition: all .5s ease;
+    
+    position: fixed;
+    
+    z-index: 1;
+    
+    top: 50px;
+    
+    width: 5rem;
+    
+    height: 200vh;
+    
+    
+    box-shadow: 0.063rem 0 1.25rem 0 rgb(145, 143, 143);
+    }
+    
+    .logo-container{
+    
+    display: flex;
+    
+    align-items: center;
+    
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    
+    width: 100%;
+    
+    /* bottom: 50%; */
+    
+    }
+    
+    
+    .logo{
+    
+     background: #fff;
+    
+    text-align:center;
+    
+    width: 3rem;
+    
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    
+    padding: 0.313rem;
+    
+    font-size: 24px;
+    
+    font-weight: 900;
+    
+    cursor: pointer;
+    
+    border: none;
+    
+    }
+
+    
+    .sidenav-collapsed{
+    
+    width: 16.5625rem;
+ }
+    
+    .sidenav-nav{
+    list-style: none;
+    
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+        height: calc(100%-3.65rem);
+         cursor: pointer;
+}
+    
+    .sidenav-nav-item{
+    width:100%;
+    margin: bottom 0.10em;
+    }
+    
+    .sidenav-nav-link{
+    
+    display: flex;
+    
+     align-items: center;
+    
+    height: 3rem;
+    
+    color: #f3f3f3;
+    
+    border-radius: 0.625rem;
+    
+    text-decoration: none;
+    transition: all .3s ease;
+}
+    
+    
+    
+    
+    .sidenav-link-icon{
+    
+    font-size: 22px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.5rem;
+    text-align: center; 
+    }
+    .sidenav-link-text{
+    margin-left: 1.5rem;
+}
+    .sidenav-nav-item:hover{
+    background-color: #259042;
+    color: #a42222;
+    }
+    
+    .sidenav-nav-link{
+    background-color: #fff;
+    color: rgb(116, 114, 114);
+    }
+    
+    

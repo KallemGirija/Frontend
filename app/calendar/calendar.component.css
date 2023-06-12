@@ -1,0 +1,48 @@
+.today{
+    background-color: blue;
+    border-collapse: collapse;
+    border-style: dashed;
+}
+tr{
+    display: contents;
+    background-color: #d2cece;
+
+    
+}
+h6,table{
+
+    padding-left: 1050px;
+    display: flex;
+    position: absolute;
+    background-color: #ffffff;
+    margin-left:900px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 40px 40px 40px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-top:-350px;
+
+
+         }
+         .th{
+            border-collapse: collapse;
+            border-style: dashed;
+         }
+         td, th {
+            border: 1px solid #9b9494;
+            text-align: left;
+            
+          }
+          
+         tr:nth-child(even) {
+            background-color: #d2cece;
+          }
+          .head{
+            display: inline-flex;
+            font-display: initial;
+            font-weight: 100px;
+          }
+          .i{
+            margin-right: 32px;;
+          }
+          

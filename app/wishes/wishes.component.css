@@ -1,0 +1,108 @@
+.in{
+    float: right;
+    clear: both;
+}
+.inn{
+    height: 100px;
+    width: 435px;
+}
+.modal-tmp{
+    width:200%;
+}
+.form-control{
+    border:solid #e2e2e2 1.5px;
+    border-radius:8px;
+}
+.wish-btn{
+    background-image:linear-gradient(to right,#11A6D5,#33CBF7);
+    border:none;
+    border-radius: 20px;
+    color:#fff;
+}
+.wish-btn:hover{
+    color:#fff;
+    }
+    .dis-btn{
+        color:#50657E;
+        border:solid#50657E 2px;
+        border-radius: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .dis-btn:hover{
+        color:#50657E;
+        border:solid#50657E 2px;
+
+    }
+    .wish-icon{
+        margin-left:150px;
+        background-color:#E3E4E5;
+        padding: 6px;
+        border-radius: 50px;
+        font-size: 25px;
+    }
+    .event{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:215% ;
+        margin-bottom: 1em;;
+    }
+    .event-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sub-title{
+        font-size:1em;
+        font-weight:normal;
+        margin-top: 0.5em;
+        margin-left:0px;
+        color:#718397;
+    }
+    .event-name{
+        font-size: 1.1em;;
+    }
+    .event-name img{
+        display: inline-block;
+        position: relative;
+        width:35px;
+        height:35px;
+    }
+    img:nth-child(n+2){
+        margin-left: -17px;
+    }
+    .btn-wish{
+        display: flex;
+    }
+.send-wish-btn{
+    border:solid#C8CACC 1px;
+    background-color:#F1F7FA;
+    color:#44434c;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding-left: 10px; 
+    padding-right: 10px;   
+}
+.wish-img{
+    position: absolute;
+    margin-top:-200px;
+}
+.modal-body img{
+    width: 45%;
+    height: 70vh;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 30%;
+  border-radius: 1px;
+  margin-left:900px;
+  background-color: white;
+  display:flex;
+  margin-top: 30px;
+  
+
+}
+

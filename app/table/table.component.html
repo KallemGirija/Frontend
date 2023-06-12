@@ -1,0 +1,32 @@
+<html>
+    <body>
+       <div class="report-container">
+            <div class="report-header">
+            <table>
+
+                <tr>
+                  <th>UserId</th>
+                  <th>UserName</th>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>dob</th>
+                  <th>status</th>
+                  <th>userType</th>
+
+                </tr>
+                <tr *ngFor="let user of table">
+                  <td>{{user.userId}}</td>
+                  <td>{{user.userName}}</td>
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.dob}}</td>
+                  <td>{{user.status}}</td>
+                  <td>{{user.userType}}</td>
+
+                </tr>
+              </table>
+              </div>
+            </div>
+</body>
+              </html>
+              

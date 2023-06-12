@@ -1,0 +1,47 @@
+<html>
+    <body>
+       <div class="reports-container">
+            <div class="reports-header">
+                <h1><a routerLink="/dashboard">Renewal</a></h1>
+                <div class="text">
+                    <select>
+                    <option value="All Policies">All Policies</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Documents</option>
+                    <option value="audi">Gallery</option>
+                </select>
+
+                <select class="recent">
+                    <option value="Recent">Recent</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Gallery</option>
+                </select>
+                </div>
+
+         <br>       
+
+<table>
+    <tr>
+    <th>PolicyNo</th>
+    <th>PrdType</th>
+    <th>Validity</th>
+    <th>Lastpaid</th>
+    <th>Contact</th>
+    <th></th>
+    
+</tr>
+<tr *ngFor="let renewals of renewal">
+    <td><img src="../assets/images/1.jpeg" class="rounded-circle" width="22px" height="22px">&nbsp;{{renewals.policyNo}}</td>
+    <td>{{renewals.prdType}}</td>
+    <td>{{renewals.validity}}</td>
+    <td style="color:blue">{{renewals.lastpaid}}</td>
+    <td>{{renewals.contact}}</td>
+    <td><img src="../assets/images/email.png" width="22px" height="22px"></td>
+  </tr>
+    </table>
+    </div>
+    </div>
+    </body>
+    </html>
+
+

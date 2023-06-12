@@ -1,0 +1,29 @@
+.reports-container {
+    margin: 100px auto 0px auto;
+    padding-left: 200px;
+    align-items: center;
+    margin-right: 100px;
+    }
+td, th {
+
+    border: 1px solid #151515;
+    text-align: justify;
+    padding: 10px;
+    table-layout: fixed;
+  }
+  table{
+      width:100%;
+      border-collapse: collapse;
+      border: #151515;
+  }
+  .recent{
+      margin-left:40px;
+  }
+  button{
+      margin-left:40px;
+      color: blue;
+
+  }
+  button:hover{
+      color:rgb(122, 9, 9);
+  }

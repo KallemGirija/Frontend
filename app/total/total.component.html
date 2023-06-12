@@ -1,0 +1,54 @@
+
+    <html>
+    <body>
+       <div class="reports-container">
+            <div class="reports-header">
+                <h1><a routerLink="/dashboard"></a></h1>
+                <div class="text">
+                    <select>
+                    <option value="All Policies">All Policies</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Documents</option>
+                    <option value="audi">Gallery</option>
+                </select>
+
+                <select class="recent">
+                    <option value="Recent">Recent</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Gallery</option>
+                </select>
+        
+                <button type="button"> UW Progress</button>
+                <button type="button">Submitted</button>
+                <button type="button">Customer to Confirm</button>
+                </div>
+         <br>       
+
+<table>
+    <tr>
+    <th>PolicyOwner</th>
+    <th>Life Insured</th>
+    <th>Prd Type</th>
+    <th>ApplicationNo/th>
+    <th>Date</th>
+    <th>SA</th>
+    <th>Status</th>
+    
+</tr>
+
+<tr *ngFor="let totals of total">
+    <td>{{totals.policyOwner}}</td>
+    <td>{{totals.lifeInsured}}</td>
+    <td>{{totals.prdType}}</td>
+    <td>{{totals.applicationNo}}</td>
+    <td>{{totals.date}}</td>
+    <td>{{totals.sa}}</td>
+    <td>{{totals.status}}</td>
+  </tr> -->
+    </table>
+    </div>
+    </div>
+    </body>
+    </html>
+
+

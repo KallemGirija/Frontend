@@ -1,0 +1,60 @@
+<html>
+    <body>
+       <div class="report-container">
+            <div class="report-header">
+                <h1><a routerLink="/dashboard">New Lead</a></h1>
+                <div class="text">
+                    <select>
+                
+                    <option value="All Policies">All Policies</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Documents</option>
+                    <option value="audi">Library</option>
+                </select>
+
+                <select class="recent">
+                    <option value="Recent">Recent</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Documents</option>
+                    <option value="audi">Library</option>
+                </select>
+
+                <button type="button"> Qualified</button>
+                <button type="button">Interested</button>
+                <button type="text"><a routerLink="/multiform"> Add New Leads</a></button>
+                </div>
+
+         <br>       
+
+<table>
+    
+      
+    <tr>
+    <th>Name</th>
+    <th>Last Contacted</th>
+    <th>Product</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>LeadStage</th>
+    <th></th>
+    
+</tr>
+<tr *ngFor="let leads of lead">
+    <td><img src="../assets/images/1.jpeg" class="rounded-circle" width="22px" height="22px">&nbsp;{{leads.name}}</td>
+    <td>{{leads.lastcontacted}}</td>
+    <td>{{leads.product}}</td>
+    <td>{{leads.email}}</td>
+    <td>{{leads.contact}}</td>
+    <td style="color:green">{{leads.leadStage}}</td>
+    <td><img src="../assets/images/email.png" width="22px" height="22px"></td>
+
+  </tr>
+
+
+
+    </table>
+    </div>
+    </div>
+    </body>
+    </html>
+

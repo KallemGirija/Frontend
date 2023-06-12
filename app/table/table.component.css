@@ -1,0 +1,45 @@
+.report-container {
+    min-height: 100px;
+    max-width: 300px;
+    margin: 80px auto 0px auto;
+    
+    
+    padding: 0px 20px 20px 20px;
+    margin-top: 300px;
+    padding-right: 500px;
+    position:fixed;
+    padding-left: 400px;
+    }
+    h1{
+      padding-bottom:400px;
+      padding-right:100px;
+    }
+    
+    .report-header {
+        height: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 100px;
+
+        }
+    table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          padding-right: 100px;
+          
+          
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: right;
+          padding: 6px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        

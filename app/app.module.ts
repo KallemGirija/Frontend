@@ -1,51 +1,75 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminWorkComponent } from './admin-work/admin-work.component';
-//import { UserComponent } from './user/user.component';
-import { TestQuestionsAddComponent } from './test-questions-add/test-questions-add.component';
-import { TestQuestionViewComponent } from './test-question-view/test-question-view.component';
-import { DataOperationService } from './data-operation-service';
-import { AdminViewComponent } from './admin-view/admin-view.component';
-import { TestPaperAdminWorkComponent } from './test-paper-admin-work/test-paper-admin-work.component';
-import { TestPaperAdminViewComponent } from './test-paper-admin-view/test-paper-admin-view.component';
-import { RouterModule,Routes } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import{FormsModule} from '@angular/forms';
-import { AboutComponent } from './about/about.component';
-import { UserComponent } from './user/user.component';
-
-
-
-
-
-const allLinks:Routes = [
-  {path : 'addexams',component:AdminViewComponent},
-  {path : 'addtestQuestions',component:TestQuestionViewComponent},
-  {path : 'about',component:AboutComponent}
-]
+import { PageComponent } from './page/page.component';
+import { CardComponent } from './card/card.component';
+import { TableComponent } from './table/table.component';
+import{HttpClientModule} from '@angular/common/http';
+import { CalendarComponent } from './calendar/calendar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import { SidenavComponent } from './sidenav/sidenav.component'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { BarComponent } from './bar/bar.component';
+import { WishesComponent } from './wishes/wishes.component';
+import { MainComponent } from './main/main.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LeadComponent } from './lead/lead.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MultiformComponent } from './multiform/multiform.component';
+import { QualifiedComponent } from './qualified/qualified.component';
+import { InterestedComponent } from './interested/interested.component';
+import { BirthdayWishComponent } from './birthday-wish/birthday-wish.component';
+import { RenewalComponent } from './renewal/renewal.component';
+import { ExpiredComponent } from './expired/expired.component';
+import { TotalComponent } from './total/total.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminWorkComponent,
-    //UserComponent,
-    TestQuestionsAddComponent,
-    TestQuestionViewComponent,
-    //DataOperationService,
-    AdminViewComponent,
-    TestPaperAdminWorkComponent,
-    TestPaperAdminViewComponent,
-    AboutComponent,
-    UserComponent
+    PageComponent,
+    CardComponent,
+    TableComponent,
+    CalendarComponent,
+    SidenavComponent,
+    BarComponent,
+    WishesComponent,
+    MainComponent,
+    DashboardComponent,
+    LeadComponent,
+    MultiformComponent,
+    QualifiedComponent,
+    InterestedComponent,
+    BirthdayWishComponent,
+    RenewalComponent,
+    ExpiredComponent,
+    TotalComponent,
+
+    
     
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(allLinks),
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
     FormsModule,
-    AppRoutingModule,HttpClientModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

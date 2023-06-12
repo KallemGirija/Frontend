@@ -1,0 +1,48 @@
+<html>
+    <body>
+       <div class="reports-container">
+            <div class="reports-header">
+                <h1><a routerLink="/dashboard">Expired</a></h1>
+                <div class="text">
+                    <select>
+                    <option value="All Policies">All Policies</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Documents</option>
+                    <option value="audi">Gallery</option>
+                </select>
+
+                <select class="recent">
+                    <option value="Recent">Recent</option>
+                    <option value="saab">Health</option>
+                    <option value="opel">Gallery</option>
+                </select>
+                </div>
+
+         <br>       
+
+<table>
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Insurance</th>
+    <th>Contact</th>
+    <th>Status</th>
+    <th>Date</th>
+    
+</tr>
+<tr *ngFor="let expired of expired">
+    
+    <td>{{expired.id}}</td>
+    <td>{{expired.name}}</td>
+    <td>{{expired.insurance}}</td>
+    <td>{{expired.contact}}</td>
+    <td>{{expired.status}}</td>
+    <td>{{expired.date}}</td>
+  </tr>
+    </table>
+    </div>
+    </div>
+    </body>
+    </html>
+
+

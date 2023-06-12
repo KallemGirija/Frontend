@@ -1,0 +1,131 @@
+
+<h1>CG ProtectForm</h1>
+<div class="img">
+<img src="../assets/images/share.jpg" width="32px" height="32px">
+<img src="../assets/images/whats.png" width="32px" height="32px">
+</div>
+<form [formGroup]="Multiform" (ngSubmit)="HandleSubmit()">
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="Basicform">
+          <div formGroupName="basic">
+            <ng-template matStepLabel><span style="background-color: rgb(12, 121, 43);">PERSONAL DETAILS</span></ng-template>
+            <mat-form-field>
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="First name" formControlName="firstname">
+            </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" formControlName="lastname" >
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-form-field>
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Last name" formControlName="lastname" >
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-form-field>
+                <mat-label>Email Address</mat-label>
+                <input matInput placeholder="Email" formControlName="Email" >
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-form-field>
+                <mat-label>DOB</mat-label>
+                <input matInput placeholder="dob"  >
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-form-field>
+                <mat-label>Pincode</mat-label>
+                <input matInput placeholder="pincode" >
+              </mat-form-field><br>
+              <mat-form-field>
+                <mat-label>Gender</mat-label>
+                <input matInput placeholder="gender" >
+                <input type="radio" display="flex">Male&nbsp;<input type="radio" display="flex">Female&nbsp;<br>
+                <input type="radio" display="flex">Transgender
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+              <mat-form-field>
+                <mat-label>Do You Smoke</mat-label>
+                <input matInput placeholder="check"  >
+                <input type="checkbox">&nbsp;&nbsp;YES
+                <input type="checkbox">NO
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-form-field>
+                <mat-label>Do You Consume Alcohol</mat-label>
+                <input matInput placeholder="check"  >
+                <input type="checkbox">&nbsp;&nbsp;YES
+                <input type="checkbox">NO
+              </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+        
+               <div>
+              <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </div>
+        </mat-step>
+        <mat-step [stepControl]="contactform"  label="INCOME DETAILS">
+          <div formGroupName="contact">
+            <mat-form-field>
+              <mat-label>Annual Income</mat-label>
+              <input type="date">
+              <input matInput formControlName="annual" placeholder="annual"
+                     required>     
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Government Rebate</mat-label>
+                <input matInput formControlName="Rebate" placeholder="Rebatee"
+                       required>
+              </mat-form-field><br>
+              <mat-form-field>
+                <mat-label>Tax Rebate</mat-label>
+                <input matInput formControlName="fax" placeholder="Fax"
+                       required>
+              </mat-form-field><br>
+            <div>
+              <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+              <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </div>
+        </mat-step>
+        <mat-step [stepControl]="addressform" label="DOCUMENTS">
+            <div formGroupName="address">
+              <mat-form-field>
+                <mat-label>Street</mat-label>
+                <input matInput formControlName="street" placeholder="street"
+                       required>
+              </mat-form-field>
+              <mat-form-field>
+                  <mat-label>City</mat-label>
+                  <input matInput formControlName="city" placeholder="City"
+                         required>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>PIN</mat-label>
+                  <input matInput formControlName="pin" placeholder="Pin"
+                         required>
+                </mat-form-field>
+              <div>
+                <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                <button mat-raised-button color="accent" >Submit</button>
+              </div>
+          </div>
+          </mat-step>
+          <mat-step [stepControl]="addressform" label="QUOTATION">
+            <div formGroupName="address">
+              <mat-form-field>
+                <mat-label>Street</mat-label>
+                <input matInput formControlName="street" placeholder="street"
+                       required>
+              </mat-form-field>
+              <mat-form-field>
+                  <mat-label>City</mat-label>
+                  <input matInput formControlName="city" placeholder="City"
+                         required>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>PIN</mat-label>
+                  <input matInput formControlName="pin" placeholder="Pin"
+                         required>
+                </mat-form-field>
+              <div>
+                <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                <button mat-raised-button color="accent" >Submit</button>
+              </div>
+          </div>
+          </mat-step>
+      </mat-stepper>
+    </form>
